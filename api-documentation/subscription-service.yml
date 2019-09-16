@@ -1,0 +1,57 @@
+openapi: 3.0.1
+info:
+  title: subscription-service
+  description: Back end service, main goal of this service is create subscriptions and send a notification to the email-service with the subscriber information
+  version: '0.1'
+servers:
+  - url: 'http://localhost:8082'
+paths:
+  /subscription/create:
+    post:
+      description: This method creates a new subscription record in the databe
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                subscriberGender:
+                  type: string
+                dateOfBirth:
+                  type: string
+                consent:
+                  type: boolean
+                email:
+                  type: string
+                campaignId:
+                  type: string
+              required:
+                - dateOfBirth;
+                - consent;
+                - email;
+                - campaignId;
+            examples:
+              '0':
+                value: "{\n\t\"email\": \"test@email.com\",\n\t\"firstName\":\"nameTest\",\n\t\"subscriberGender\": \"MALE\",\n\t\"dateOfBirth\": \"2000-01-01\",\n\t\"consent\": true,\n\t\"campaignId\": \"123-abc\"\n\t\n}"
+      responses:
+        '201':
+          description: Response id of the object created
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples:
+                '0':
+                  value: "{\"id\": \"123123-123123\"}"
+      servers:
+        - url: 'http://localhost:8082'
+    servers:
+      - url: 'http://localhost:8082'
+
+components:
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic

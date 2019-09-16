@@ -1,0 +1,72 @@
+version: "3"
+
+networks:
+  public-network:
+
+  private-network:
+    internal: true
+
+services:
+  zookeeper:
+    image: zookeeper:3.5.5
+    container_name: zookeeper
+    networks:
+      - private-network
+    ports:
+      - 2181:2181
+
+  kafka:
+    image: wurstmeister/kafka:2.11-2.0.0
+    container_name: kafka
+    networks:
+      - private-network
+    depends_on:
+      - zookeeper
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CREATE_TOPICS: "email:1:1"
+      KAFKA_ADVERTISED_PORT: 9092
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  email-service:
+    image: adidas/email-service:0.0.1-SNAPSHOT
+    networks:
+      - private-network
+    depends_on:
+      - kafka
+    container_name: email-service
+    ports:
+      - "8083:8083"
+    environment:
+      - KAFKA_SERVICE=kafka:9092
+
+  subscription-service:
+    image: adidas/subscription-service:0.0.1-SNAPSHOT
+    networks:
+      - private-network
+    depends_on:
+      - kafka
+    container_name: subscription-service
+    ports:
+      - "8082:8082"
+    environment:
+      - KAFKA_SERVICE=kafka:9092
+
+  public-service:
+    image: adidas/public-service:0.0.1-SNAPSHOT
+    networks:
+      - private-network
+      - public-network
+    depends_on:
+      - subscription-service
+    container_name: public-service
+    ports:
+      - "8081:8081"
+    expose:
+      - "8081"

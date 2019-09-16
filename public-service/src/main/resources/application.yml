@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: subscription-service
+
+server:
+  port: 8081
+
+subscription-service:
+  url: subscription-service:8082
+  security:
+    username: adidas
+    password: adidas

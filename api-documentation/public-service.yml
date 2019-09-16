@@ -1,0 +1,57 @@
+openapi: 3.0.1
+info:
+  title: public-service
+  description: Front end exposed in the public network
+  version: '0.1'
+servers:
+  - url: 'http://localhost:8081'
+paths:
+  /subscribe:
+    post:
+      description: This method will create a new subscription to a newsletter
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                subscriberGender:
+                  type: string
+                dateOfBirth:
+                  type: string
+                consent:
+                  type: boolean
+                email:
+                  type: string
+                campaignId:
+                  type: string
+              required:
+                - dateOfBirth;
+                - consent;
+                - email;
+                - campaignId;
+            examples:
+              '0':
+                value: "{\n\t\"email\": \"test@email.com\",\n\t\"firstName\":\"nameTest\",\n\t\"subscriberGender\": \"MALE\",\n\t\"dateOfBirth\": \"2000-01-01\",\n\t\"consent\": true,\n\t\"campaignId\": \"123-abc\"\n\t\n}"
+      responses:
+        '201':
+          description: Response id of the object created
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                type: string
+              examples:
+                '0':
+                  value: "{\"id\":\"123123-123123\"}"
+      servers:
+        - url: 'http://localhost:8081'
+    servers:
+      - url: 'http://localhost:8081'
+
+components:
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic

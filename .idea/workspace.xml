@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64f99318-719b-4281-b578-f3ec21cf9634" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="nexus-server" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Qp736byUGpRBVZZF84bHayvyGH" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public-service/src/main/java/com/adidas/newsletter/publicservice/model" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.adidas.newsletter.emailservice.dto.enums" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.adidas.newsletter.subscriptionservice" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.adidas.newsletter.publicservice.model" />
+      <recent name="com.adidas.newsletter.subscriptionservice.enums" />
+      <recent name="com.adidas.newsletter.subscriptionservice.entity.enums" />
+      <recent name="com.adidas.newsletter.emailservice.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public-service/src/main/java/com/adidas/newsletter/publicservice/model" />
+      <recent name="$PROJECT_DIR$/email-service/src/test/resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EmailServiceApplication">
+    <configuration name="EmailServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="email-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.adidas.newsletter.emailservice.EmailServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PublicServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="public-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.adidas.newsletter.publicservice.PublicServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubscriptionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="subscription-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.adidas.newsletter.subscriptionservice.SubscriptionServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64f99318-719b-4281-b578-f3ec21cf9634" name="Default Changelist" comment="" />
+      <created>1568455482119</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568455482119</updated>
+      <workItem from="1568455484908" duration="17492000" />
+      <workItem from="1568541515401" duration="21399000" />
+      <workItem from="1568606765514" duration="2545000" />
+      <workItem from="1568615384840" duration="3770000" />
+      <workItem from="1568647797791" duration="14255000" />
+      <workItem from="1568669063786" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

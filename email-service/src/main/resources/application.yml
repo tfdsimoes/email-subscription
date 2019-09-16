@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: email-service
+  kafka:
+    consumer:
+      bootstrap-servers: ${KAFKA_SERVICE}
+      group-id: group_id_email
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: ${KAFKA_SERVICE}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port: 8083
+
+topic:
+  email: email
+

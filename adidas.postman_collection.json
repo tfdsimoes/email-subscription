@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "acae09be-cb23-40b6-8a12-39156c816ee4",
+		"name": "adidas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request public service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"testEmail@email.com\",\n\t\"firstName\": \"testName\",\n\t\"subscriberGender\": \"ND\",\n\t\"dateOfBirth\": \"2010-09-10\",\n\t\"consent\": true,\n\t\"campaignId\": \"campaignTest\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/newsletter/subscription",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"newsletter",
+						"subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request subscription service",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "adidas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "adidas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"testEmail@email.com\",\n\t\"firstName\": \"testName\",\n\t\"subscriberGender\": \"ND\",\n\t\"dateOfBirth\": \"2010-09-10\",\n\t\"consent\": true,\n\t\"campaignId\": \"campaignTest\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8082/subscription/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"subscription",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
